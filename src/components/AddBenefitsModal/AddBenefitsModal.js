@@ -11,6 +11,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { Container } from '@mui/material';
+import { Grid, TextField } from '@material-ui/core';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogContent-root': {
@@ -60,9 +61,11 @@ export default function AddBenefitsModal() {
     };
     return (
         <Container>
-            <Button variant="outlined" sx={{ borderRadius: 80 ,display: 'flex',justifyContent: 'flex-end', alignItems: "flex-end" }} onClick={handleClickOpen}>
-                Add Benefits
-            </Button>
+            <Typography sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: "flex-end" }}>
+                <Button variant="outlined" sx={{ borderRadius: 80 }} onClick={handleClickOpen}>
+                    Add Benefits
+                </Button>
+            </Typography>
             <BootstrapDialog
                 onClose={handleClose}
                 aria-labelledby="customized-dialog-title"
@@ -74,75 +77,75 @@ export default function AddBenefitsModal() {
                     Add Benefits
                 </BootstrapDialogTitle>
 
-                <DialogContent dividers sx={{ backgroundColor: "#EAEAEC" }}>
+                <DialogContent dividers sx={{ backgroundColor: "#EAEAEC" ,m:1}}>
                     <Typography gutterBottom>
                         Choose Benefits to add.
                     </Typography>
-                    <Typography gutterBottom>
+                    <Typography gutterBottom >
 
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29'}} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
                             Excellent Health Care
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Daily Snacks
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Group Activities
                         </Button>
 
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Volunteer Opportunities
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Stack Options
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Wellness Programs
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Paid Time Off
                         </Button>
 
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Life Insurance
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Unlimited PTO
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Tuition Reimbursement
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Family and Medical Leave (FMLA)
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Disability Insurance
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Commuter Benefits
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Retirement Savings
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Overtime Pay
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Student Loan Repayment
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Relocation and Housing
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Remote Working
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Telecommuting
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Work form Home
                         </Button>
-                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }} onClick={handleClickOpen}>
+                        <Button variant="outlined" endIcon={<AddCircleOutlineIcon sx={{ color: '#f15a29' }} />} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid",m:0.5 }} onClick={handleClickOpen}>
                             Other
                         </Button>
                     </Typography>
@@ -154,12 +157,26 @@ export default function AddBenefitsModal() {
                     </Typography>
                 </DialogContent>
 
+                <Grid item xs={12} >
+                    <Typography sx={{mx:2}}>
+                        Title*
+                    </Typography>
+                    <TextField fullWidth sx={{width:'100%',m:2}} id="standard-basic" label="Group Activites" variant="standard" />
+                </Grid>
+                <Grid item xs={12}>
+                    <Typography sx={{mx:2}}>
+                        Description*
+                    </Typography>
+                    <TextField fullWidth label="Please Enter" id="demo-helper-text-aligned-no-helper" />
+                </Grid>
                 <DialogActions>
                     <Button autoFocus onClick={handleClose} sx={{ borderRadius: 80, color: 'text.primary', border: "1px gray solid" }}>
                         Save
                     </Button>
                 </DialogActions>
             </BootstrapDialog>
+
+
         </Container>
     );
 };

@@ -9,6 +9,7 @@ import Select from '@mui/material/Select';
 import InputAdornment from '@mui/material/InputAdornment';
 import FilledInput from '@mui/material/FilledInput';
 import { Typography } from '@mui/material';
+import { Grid } from '@material-ui/core';
 
 const Form = () => {
     const [age, setAge] = React.useState('');
@@ -17,22 +18,19 @@ const Form = () => {
         setAge(event.target.value);
     };
     return (
-        <Container fixed>
-
-            <Box
-                component="form"
-                sx={{
-                    '& .MuiTextField-root': { m: 1, width: '63ch' },
-                }}
-                noValidate
-                autoComplete="off"
-            >
-                <div>
+        <Container>
+            <Grid container spacing={2} sx={{ p: 4 }}>
+                <Grid item xs={6}>
+                    <Typography sx={{mt:2, textAlign:'start'}}>Website</Typography>
                     <TextField id="filled-search"
+                        sx={{ width: '100%' }}
                         label="Website (URL)"
                         type="search"
                         variant="filled" />
-                    <FormControl variant="filled" sx={{ m: 1, width: '63ch' }}>
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography sx={{mt:2, textAlign:'start'}}>Industry*</Typography>
+                    <FormControl variant="filled" sx={{ width: '100%' }}>
                         <InputLabel id="demo-simple-select-filled-label">Select Industry</InputLabel>
                         <Select
                             labelId="Select Industry"
@@ -43,37 +41,58 @@ const Form = () => {
                             <MenuItem value="">
                                 <em>None</em>
                             </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
+                            <MenuItem sx={{textAlign:'start'}} value={10}>Ten</MenuItem>
                             <MenuItem value={20}>Twenty</MenuItem>
                             <MenuItem value={30}>Thirty</MenuItem>
                         </Select>
                     </FormControl>
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography sx={{textAlign:'start'}}>Company Size*</Typography>
                     <TextField id="filled-search"
+                    sx={{ width: '100%' }}
                         label="Employees"
                         type="search"
                         variant="filled" />
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography sx={{textAlign:'start'}}>Headquarters</Typography>
                     <TextField id="filled-search"
-                        label="Search field"
-                        type="search"
-                        variant="filled" />
-                    <TextField id="filled-search"
+                    sx={{ width: '100%' }}
                         label="Enter Text"
                         type="search"
                         variant="filled" />
-                    {/* <label className="my-1 mr-2 text-dark" for="inlineFormInputName1">Your Name:</label> */}
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography sx={{textAlign:'start'}}>Type</Typography>
                     <TextField id="filled-search"
-                        label="Search field"
+                    sx={{ width: '100%' }}
+                        label="Enter Text"
                         type="search"
                         variant="filled" />
-                    <FormControl fullWidth sx={{ m: 1, width: '129ch' }} variant="filled">
+                </Grid>
+                <Grid item xs={6}>
+                    <Typography sx={{textAlign:'start'}}>Founded</Typography>
+                    <TextField id="filled-search"
+                    sx={{ width: '100%' }}
+                        label="Enter Your"
+                        type="search"
+                        variant="filled" />
+                </Grid>
+
+                {/* <label className="my-1 mr-2 text-dark" for="inlineFormInputName1">Your Name:</label> */}
+
+                <Grid item xs={12}>
+                    <Typography sx={{textAlign:'start'}}>Specialties</Typography>
+                    <FormControl fullWidth sx={{ width: '100%'}} variant="filled">
                         <InputLabel htmlFor="filled-adornment-amount">Amount</InputLabel>
                         <FilledInput
                             id="filled-adornment-amount"
                         />
                     </FormControl>
-                </div>
+                </Grid>
 
-            </Box>
+            </Grid>
         </Container>
     );
 };
